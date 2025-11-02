@@ -13,6 +13,58 @@ body {
   max-width: 100%;
 }
 
+/* Article styling for newspaper-like appearance */
+article {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.article-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0.3em;
+  font-family: Georgia, 'Times New Roman', serif;
+  text-align: left;
+  padding: 0;
+  max-width: 100%;
+}
+
+.article-byline {
+  font-size: 1em;
+  font-style: italic;
+  margin-bottom: 0.2em;
+  color: #333;
+  padding: 0;
+}
+
+.article-date {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+article p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin-bottom: 1.2em;
+  text-align: justify;
+  padding: 0;
+}
+
+article p:first-of-type::first-letter {
+  font-size: 3.5em;
+  font-weight: bold;
+  float: left;
+  line-height: 0.9;
+  margin-right: 0.1em;
+  margin-top: 0.1em;
+}
+
 /* Centered content with optimal reading width */
 p, ol, ul, h1, h2, h3, img {
   max-width: 700px;
@@ -88,4 +140,39 @@ a:hover {
   img {
     padding: 0;
   }
+  
+  article {
+    padding: 0 10px;
+  }
+  
+  .article-title {
+    font-size: 1.8em;
+  }
+  
+  article p {
+    font-size: 1em;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  text-decoration: none;
 }
